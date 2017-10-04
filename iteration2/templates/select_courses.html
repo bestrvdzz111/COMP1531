@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<body >
+<b>question survey</b>
+
+
+Please select course(s):
+  </br>
+  <Form method="POST">
+  {% if courses %}
+      {% for course in courses %}
+         {% for c in course %}
+          <input type="radio" name="course" value= {{c}}>
+          <label>{{c}}</label>
+         </br>
+         {% endfor %}
+      {% endfor %}
+  {%else%}
+      No course to show
+  {% endif %}
+    
+    <button type="submit">Submit</button>
+    
+   </Form>
+
+
+
+</body>
+<html>
+

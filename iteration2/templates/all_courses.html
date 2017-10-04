@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+   <head>
+   <title>All courses:</title>
+   </head>
+   <body>
+      <h1>Course Offerrings:</h1>
+      {% if courses %}
+       {% for course in courses %}
+       {% for c in course %}
+         <h1> {{c}}  </h1>
+         {% endfor %}	
+      {% endfor %}
+      {%else%}
+      No course to show
+      {% endif %}
+   </body>
+   </html>

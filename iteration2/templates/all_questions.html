@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+   <head>
+   <title>All questions:</title>
+   </head>
+   <body>
+       
+      <h1> All questions are: </h1>
+      {% if questions %}
+       {% for course in questions %}
+       {% for c in course %}
+         <h1> {{c}}  </h1>
+         {% endfor %}	
+      {% endfor %}
+      {%else%}
+      No course to show
+      {% endif %}
+    
+      
+      
+      
+      
+   </body>
+   </html>
